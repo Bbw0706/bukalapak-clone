@@ -1,8 +1,10 @@
 import React, {Component} from 'react';
 import {Platform, StyleSheet, Text, View, StatusBar} from 'react-native';
+import { Container} from 'native-base';
 
 import Searchbar from "./component/Searchbar.js"
 import IconBar from "./component/IconBar.js"
+import ContentScreen from "./component/Contents/ContentScreen.js"
 
 export default class Homescreen extends Component{
   static navigationOptions = ({ navigation }) => {
@@ -14,12 +16,13 @@ export default class Homescreen extends Component{
 
   render() {
     return (
-      <View style={styles.container}>
+      <Container style={styles.container}>
         <StatusBar 
           backgroundColor="#dd0057"
           content="light-content"
         />
-      </View>
+        <ContentScreen {...this.props}/>
+      </Container>
     );
   }
 }

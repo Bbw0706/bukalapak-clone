@@ -41,7 +41,7 @@ const styles = StyleSheet.create({
 export default class SwiperImages extends Component {
   render(){
     return (
-      <Swiper style={styles.wrapper} showsButtons={false} paginationStyle={{color:"red"}} autoplay={true} activeDotColor="#dd0057">
+      <Swiper style={styles.wrapper} showsButtons={false} autoplay={true} activeDotColor="#dd0057">
         <View style={styles.slide1}>
           <Image style={{width:"80%", height:230,}} source={require('../../assets/Account/1.png')} />
           <Text style={styles.textTitle}>Transaksi Lebih Cepat</Text>
