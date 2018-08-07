@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {Platform, StyleSheet,  View} from 'react-native';
-import { Container, Header,Text, Content, Button} from 'native-base';
+import { Container, Icon,Header,Text, Content, Button} from 'native-base';
 
 import Forms from "./component/Forms.js"
 
@@ -26,14 +26,14 @@ export default class Loginscreen extends Component{
           <View style={{flex : 1, flexDirection:"row", margin:22,marginTop:10, justifyContent:"space-between"}}>
             <View style={{width : "48%"}}>
               <Button block light iconLeft>
-                <Icon type="FontAwesome" name='logo-facebook' />
+                <Icon name='logo-facebook' style={{color:"#0d47a1"}}/>
                 <Text>Facebook</Text>
               </Button>
             </View>
 
             <View style={{width : "48%"}}>
               <Button block light iconLeft>
-                <Icon type="FontAwesome" name='logo-google' />              
+                <Icon name='logo-google' style={{color:"#ef5350"}}/>              
                 <Text>Google</Text>
               </Button>
             </View>
