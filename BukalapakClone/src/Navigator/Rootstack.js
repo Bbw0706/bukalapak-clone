@@ -7,6 +7,7 @@ import Homescreen from "../Home/Homescreen.js"
 import Loginscreen from "../Login/Loginscreen.js"
 import Accountscreen from "../Account/Accountscreen.js"
 import Cartscreen from "../Cart/Cartscreen.js"
+import Transactionscreen from "../Transaction/Transactionscreen.js"
 
 const HomeStack = createStackNavigator(
 	{
@@ -65,11 +66,30 @@ const CartStack = createStackNavigator(
 	}
 )
 
+const TransactionStack = createStackNavigator(
+	{
+		Transaction : Transactionscreen
+	},
+	{
+		initialRouteName:"Transaction",
+		navigationOptions: {
+	      headerStyle: {
+	        backgroundColor: '#dd0057',
+	      },
+	      headerTintColor: '#fff',
+	      headerTitleStyle: {
+	        fontWeight: 'bold',
+	      },
+	    },
+	}
+)
+
 
 const Rootstack = createMaterialBottomTabNavigator(
 	{
 	    Home: HomeStack,
 	    Cart: CartStack,
+	    Transaction: TransactionStack,
 	    Account : AccountStack
 	},
 	{
@@ -81,7 +101,9 @@ const Rootstack = createMaterialBottomTabNavigator(
 	          iconName = `ios-home`;
 	        } else if (routeName === 'Cart') {
 	          iconName = `md-cart`;
-	        }	else if (routeName === 'Account') {
+	        } else if (routeName === 'Transaction') {
+	          iconName = `md-repeat`;
+	      	} else if (routeName === 'Account') {
 	          iconName = `ios-people`;
 	      	}
 	        return <Ionicons name={iconName} size={25} color={tintColor} />;
