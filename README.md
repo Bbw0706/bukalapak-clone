@@ -4,4 +4,4 @@
 
 ```
 $ cd bukalapak-clone/BukalapakClone
-$ npm install . yarn
+$ npm install / yarn
