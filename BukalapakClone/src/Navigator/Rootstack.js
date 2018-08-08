@@ -2,6 +2,7 @@ import React, {Component} from "react";
 import {createStackNavigator} from "react-navigation"
 import {createMaterialBottomTabNavigator} from "react-navigation-material-bottom-tabs";
 import Ionicons from 'react-native-vector-icons/Ionicons';
+import {Icon} from "native-base"
 
 import Homescreen from "../Home/Homescreen.js"
 import Loginscreen from "../Login/Loginscreen.js"
@@ -10,6 +11,7 @@ import Cartscreen from "../Cart/Cartscreen.js"
 import Transactionscreen from "../Transaction/Transactionscreen.js"
 import HandphoneScreen from "../HandphoneView/HandphoneScreen.js"
 import PaymentScreen from "../Payment/PaymentScreen.js"
+import BukamallScreen from "../Bukamall/BukamallScreen.js"
 
 const HomeStack = createStackNavigator(
 	{
@@ -26,6 +28,25 @@ const HomeStack = createStackNavigator(
 	        backgroundColor: '#dd0057',
 	      },
 	      headerTintColor: '#fff',
+	      headerTitleStyle: {
+	        fontWeight: 'bold',
+	      },
+	    },
+	}
+)
+
+const BukamallStack = createStackNavigator(
+	{
+		Bukamall: BukamallScreen
+	},
+	{
+		initialRouteName: 'Bukamall',
+	    /* The header config from HomeScreen is now here */
+	    navigationOptions: {
+	      headerStyle: {
+	        backgroundColor: '#fff',
+	      },
+	      headerTintColor: '#000',
 	      headerTitleStyle: {
 	        fontWeight: 'bold',
 	      },
@@ -92,6 +113,7 @@ const TransactionStack = createStackNavigator(
 const Rootstack = createMaterialBottomTabNavigator(
 	{
 	    Home: HomeStack,
+	    Bukamall : BukamallStack,
 	    Cart: CartStack,
 	    Transaction: TransactionStack,
 	    Account : AccountStack
@@ -109,6 +131,10 @@ const Rootstack = createMaterialBottomTabNavigator(
 	          iconName = `md-repeat`;
 	      	} else if (routeName === 'Account') {
 	          iconName = `ios-people`;
+	      	}
+
+	      	if(routeName === "Bukamall"){
+	        	return <Icon type="FontAwesome" name="diamond" style={{color:tintColor, fontSize:20}} />;
 	      	}
 	        return <Ionicons name={iconName} size={25} color={tintColor} />;
 	      },
