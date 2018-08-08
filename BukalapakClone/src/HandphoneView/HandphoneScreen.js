@@ -13,7 +13,7 @@ export default class HandphoneScreen extends Component {
           <SwipersImages />
           <Lists />
         </Content>
-          <Footers />        
+          <Footers {...this.props}/>        
       </Container>
     );
   }

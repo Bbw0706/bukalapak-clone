@@ -9,12 +9,14 @@ import Accountscreen from "../Account/Accountscreen.js"
 import Cartscreen from "../Cart/Cartscreen.js"
 import Transactionscreen from "../Transaction/Transactionscreen.js"
 import HandphoneScreen from "../HandphoneView/HandphoneScreen.js"
+import PaymentScreen from "../Payment/PaymentScreen.js"
 
 const HomeStack = createStackNavigator(
 	{
 		Home: Homescreen,
 		Login: Loginscreen,
-		Handphone : HandphoneScreen
+		Handphone : HandphoneScreen,
+		Payment : PaymentScreen
 	},
 	{
 		initialRouteName: 'Home',
