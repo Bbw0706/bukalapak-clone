@@ -8,11 +8,13 @@ import Loginscreen from "../Login/Loginscreen.js"
 import Accountscreen from "../Account/Accountscreen.js"
 import Cartscreen from "../Cart/Cartscreen.js"
 import Transactionscreen from "../Transaction/Transactionscreen.js"
+import HandphoneScreen from "../HandphoneView/HandphoneScreen.js"
 
 const HomeStack = createStackNavigator(
 	{
 		Home: Homescreen,
-		Login: Loginscreen
+		Login: Loginscreen,
+		Handphone : HandphoneScreen
 	},
 	{
 		initialRouteName: 'Home',

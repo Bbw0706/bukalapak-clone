@@ -14,7 +14,7 @@ export default class ContentScreen extends Component {
                  <Text style={{color: '#dd0057', fontSize:13}}>Home</Text>
                </TabHeading>}>
             <Content>
-              <HomeContents />
+              <HomeContents {...this.props}/>
             </Content>
           </Tab>
           <Tab heading={<TabHeading style={{backgroundColor: '#fff'}}>

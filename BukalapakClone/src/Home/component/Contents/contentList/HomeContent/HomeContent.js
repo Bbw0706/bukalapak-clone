@@ -6,14 +6,18 @@ import SwipersImages from "./component/SwipersImages";
 import GridIcon from "./component/GridIcon";
 import CardAjakTeman from "./component/CardAjakTeman";
 import FlashSale from "./component/FlashSale";
+import Promo from "./component/Promo";
+import Handphone from "./component/Handphone";
 
-const HomeContent = () => (
+const HomeContent = ({navigation}) => (
   <View>
       <SwipersImages />
       <Text style={{color:'#000', fontWeight:'900', left:35, fontSize:14}}>E-Voucher, tiket & investasi</Text>
       <GridIcon />
       <CardAjakTeman />
       <FlashSale />
+      <Promo />      
+      <Handphone navigation={navigation}/>
   </View>
 )
 

@@ -5,7 +5,7 @@ export default class KategoriContent extends Component {
     return (
         <Content>
 
-          <Item style={{marginRight:20, marginLeft:20}}>
+          <Item style={{height : 40,width :"100%", right:2,backgroundColor:"#eee"}}>
             <Icon name="ios-search" />          
             <Input placeholder="Search" />
           </Item>

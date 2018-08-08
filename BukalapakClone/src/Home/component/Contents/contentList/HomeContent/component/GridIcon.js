@@ -53,9 +53,8 @@ const styles = StyleSheet.create({
   },
   itemName: {
   	textAlign : "center",
-    fontSize: 7,
+    fontSize: 7.5,
     color: '#000',
-    fontWeight: '600',
   },
   itemCode: {
     fontWeight: '600',
