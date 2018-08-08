@@ -3,5 +3,5 @@
 ## React Native Installation
 
 ```
-$ cd BukalapakClone
+$ cd bukalapak-clone/BukalapakClone
 $ npm install . yarn
